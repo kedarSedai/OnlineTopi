@@ -1,0 +1,22 @@
+<section class="py-2">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h1 class="display-3 mt-3 pt-5">
+       ढाका टोपी
+      
+      <form action="/charge" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="{{ stripePublishableKey}}"
+          data-amount="1000"
+          data-name="ढाका टोपी"
+          data-description="ढाका टोपी कीनौम"
+          data-locale="auto">
+        </script>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <img src="/image/dhakatopi.jpg" alt="" class="img-fluid">
+    </div>
+  </div>
+</section>
