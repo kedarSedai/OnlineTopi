@@ -17,9 +17,6 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-//static file
-app.use(express.static(path.join(__dirname, 'public')));
-
 //index routes
 app.get('/', (req, res) => {
     res.render('index', {
@@ -42,5 +39,8 @@ app.post('/charge', (req, res) => {
     }))
     .then(charge => res.render('success'));
 });
+
+//static file
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(port, (req, res) => console.log(`Server is running at${port}`));
